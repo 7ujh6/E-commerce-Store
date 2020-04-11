@@ -45,4 +45,14 @@ const config = {
   provider.setCustomParameters({prompt: 'select_account'});
   export const SignInWithGoogle = () => auth.signInWithPopup(provider);
   
+  export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+    const collectionRef = firestore.collection(collectionKey);
+
+    const batch = firestore.batch();
+    objectsToAdd.forEach(obj => {const newDocRef = collectionRef.doc()
+    batch.set(newDocRef, obj)});
+
+   return await console.log("The return of batch.commit()", batch.commit());
+  }
+
   export default firebase;
