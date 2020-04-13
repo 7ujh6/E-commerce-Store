@@ -37,6 +37,7 @@ const config = {
     return userRef;
   }
 
+
   export const auth = firebase.auth();
   export const firestore = firebase.firestore();
 
