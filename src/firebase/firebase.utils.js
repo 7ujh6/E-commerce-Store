@@ -53,7 +53,8 @@ const config = {
     objectsToAdd.forEach(obj => {const newDocRef = collectionRef.doc()
     batch.set(newDocRef, obj)});
 
-   return await console.log("The return of batch.commit()", batch.commit());
+
+   return await batch.commit();
   }
 
   export default firebase;

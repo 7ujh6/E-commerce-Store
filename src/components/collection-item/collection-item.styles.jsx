@@ -15,13 +15,38 @@ position: relative;
         opacity: 0.85;
         display: flex;
       }
-}`
+}
+
+@media screen and (max-width: 800px) {
+    width: 40vw;
+
+    position: relative;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+      button {
+        opacity: unset;
+      }
+  }
+}
+`
 
 export const AddButton = styled(CustomButton)`width: 80%;
 opacity: 0.7;
 position: absolute;
 top: 255px;
-display: none;`
+display: none;
+
+@media screen and (max-width: 800px) {
+    display: block;
+    opacity: 0.9;
+    min-width: unset;
+    padding: 0 10px;
+  }
+
+`
 
 export const BackgroundImage = styled.div`width: 100%;
 height: 95%;
