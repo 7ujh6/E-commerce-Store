@@ -10,7 +10,7 @@ import {connect} from 'react-redux';
 import {setCurrentUser} from './redux/user/users.actions';
 import {selectCurrentUser} from './redux/user/user.selector';
 import {createStructuredSelector} from 'reselect';
-import {GlobalStyle} from './index'
+import {GlobalStyle} from './global.styles'
 
 class App extends React.Component {
   
